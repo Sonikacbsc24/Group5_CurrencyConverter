@@ -35,3 +35,25 @@ public class CurrencyConverter {
         currencyNames.put("CNY", "Chinese Yuan");
         currencyNames.put("AED", "UAE Dirham");
     }
+    
+ 
+        
+        // Get number of target currencies
+        System.out.print("\nHow many currencies do you want to convert to? ");
+        int numCurrencies = scanner.nextInt();
+        scanner.nextLine(); // Consume newline
+        
+        // Get target currencies and perform conversions
+        System.out.println("\nEnter the target currencies:");
+        String[] targetCurrencies = new String[numCurrencies];
+        
+        for (int i = 0; i < numCurrencies; i++) {
+            System.out.print((i + 1) + ". Enter currency code: ");
+            targetCurrencies[i] = scanner.nextLine().toUpperCase();
+            
+            if (!exchangeRates.containsKey(targetCurrencies[i])) {
+                System.out.println("   Warning: " + targetCurrencies[i] + " is not supported. Skipping...");
+                targetCurrencies[i] = null;
+            }
+        }
+    
