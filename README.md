@@ -21,15 +21,25 @@ A class CurrencyConverter is created with two HashMap collections — one for st
 
 
 Available currencies:
+
 AUD - Australian Dollar
+
 CHF - Swiss Franc
+
 AED - UAE Dirham
+
 JPY - Japanese Yen
+
 EUR - Euro
+
 GBP - British Pound
+
 USD - US Dollar
+
 CAD - Canadian Dollar
+
 INR - Indian Rupee
+
 CNY - Chinese Yuan
 
 
