@@ -58,5 +58,7 @@ Enter the target currencies:
 Source: 675.89 INR
 
 675.89 INR = 7.66 USD
+
 675.89 INR = 28.11 AED
+
 675.89 INR = 6.59 EUR
