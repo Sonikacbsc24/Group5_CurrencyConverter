@@ -56,4 +56,19 @@ public class CurrencyConverter {
                 targetCurrencies[i] = null;
             }
         }
+
+        // Display conversion results
+        System.out.println("\n=== Conversion Results ===");
+        System.out.printf("Source: %.2f %s\n\n", amount, sourceCurrency);
+        
+        for (String targetCurrency : targetCurrencies) {
+            if (targetCurrency != null) {
+                double convertedAmount = convertCurrency(amount, sourceCurrency, targetCurrency);
+                System.out.printf("%.2f %s = %.2f %s\n", 
+                    amount, sourceCurrency, convertedAmount, targetCurrency);
+            }
+        }
+        
+        scanner.close();
+    }
     
