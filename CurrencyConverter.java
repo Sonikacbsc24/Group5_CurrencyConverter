@@ -35,8 +35,31 @@ public class CurrencyConverter {
         currencyNames.put("CNY", "Chinese Yuan");
         currencyNames.put("AED", "UAE Dirham");
     }
-    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         
+        System.out.println("=== Multi-Currency Converter ===\n");
+        
+        // Display available currencies
+        System.out.println("Available currencies:");
+        for (String currency : exchangeRates.keySet()) {
+            System.out.println(currency + " - " + currencyNames.get(currency));
+        }
+        System.out.println();
+        
+        // Get source currency
+        System.out.print("Enter source currency (e.g., USD): ");
+        String sourceCurrency = scanner.nextLine().toUpperCase();
+        
+        if (!exchangeRates.containsKey(sourceCurrency)) {
+            System.out.println("Error: Currency not supported!");
+            scanner.close();
+            return;
+        }
+        
+        // Get amount
+        System.out.print("Enter amount to convert: ");
+        double amount = scanner.nextDouble();
         
         // Get number of target currencies
         System.out.print("\nHow many currencies do you want to convert to? ");
