@@ -36,7 +36,7 @@ public class CurrencyConverter {
         currencyNames.put("AED", "UAE Dirham");
     }
     
- 
+        
         
         // Get number of target currencies
         System.out.print("\nHow many currencies do you want to convert to? ");
@@ -71,4 +71,12 @@ public class CurrencyConverter {
         
         scanner.close();
     }
-    
+    /**
+     * Converts amount from source currency to target currency
+     */
+    private static double convertCurrency(double amount, String from, String to) {
+        // Convert to USD first, then to target currency
+        double amountInUSD = amount / exchangeRates.get(from);
+        return amountInUSD * exchangeRates.get(to);
+    }
+}
