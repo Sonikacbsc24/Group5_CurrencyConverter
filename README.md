@@ -5,6 +5,13 @@ This Java program demonstrates the use of HashMaps, static initializers, and use
 
 A class CurrencyConverter is created with two HashMap collections — one for storing exchange rates relative to USD and another for storing currency names.
 
+## TEAM MEMBERS:
+
+* Prathibha. B - 1RUA24SCS0081
+* Shreeraksha. S. Jadhav - 1RUA24SCS0106
+* Shubhakar. G - 1RUA24SCS0107
+* Sonika. C - 1RUA24SCS0111
+
 ## The program allows the user to:
 
 * Choose a source and target currency
